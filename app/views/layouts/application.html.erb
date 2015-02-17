@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>ParadeSite</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <link href="https://fonts.googleapis.com/css?family=Merienda+One" rel="stylesheet" type="text/css">
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+	<% content_for :stylesheets do %>
+	  <%= stylesheet_link_tag 'tasks/new' %>
+	<% end %>
+
+	<div class="mask">
+	  <%= image_tag("mask.jpg", :alt => " ", :class => "mask") %>
+	</div>
+
+	<h1 class="title">Bloody Warriors Parade</h1>
+	<h3 class="explanation">A San Francisco Jambalaya Party + Mardi Gras Parade</h3>
+	<div class="center-info">
+		<ul class="info">		
+			<li><b>Date:</b> Saturday, March 14, 2015</li>
+			<li><b>Jambalaya Time:</b> 1pm</li>
+			<li><b>Jambalaya Location:</b> Dolores Park</li>
+			<li><b>Parade Begins:</b> 3pm</li>
+			<li><b>Parade Route:</b> See Map </li>
+		</ul>
+	<!-- Make this a link. Link to nav page AND new nonprofit website after you make it... -->
+	</div>
+
+	<h1 class="explanation">Party for a Cause: Endometriosis Awareness. </br><!-- Find out more...  --></h1>
+
+	<%= yield %>
+
+	<div id="nav-links">
+		<ul class="horizontal">
+		<span class="nav-links">	
+			<li><%= link_to "Contact Us", :controller => :static, :action => :contact %></li>
+			<li><%= link_to "Parade Route", :controller => :static, :action => :parade_route %></li>
+			<li><%= link_to "Sign Up", :root %></li>
+		</span>
+		</ul>
+	</div>
+
+</body>
+</html>

@@ -1,0 +1,100 @@
+<%= form_for(@participant) do |f| %>
+  <% if @participant.errors.any? %>
+    <div id="error_explanation">
+      <h2 class="info"><%= pluralize(@participant.errors.count, "error") %> Sorry, we need you to fix these errors before you can join us for the parade!</h2>
+
+      <ul>
+      <% @participant.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :email %>:
+    <%= f.text_field :email %>
+</br>
+    <%= f.label :name %>:
+    <%= f.text_field :name %>
+  </div>
+<span class="info">I'll be bringing...</span>
+</br>
+<span class="info">Drinks:</span>
+  <div class="field">
+    <%= f.label :soda %>
+    <%= f.check_box :soda %>
+
+    <%= f.label :water %>
+    <%= f.check_box :water %>
+
+    <%= f.label :beer %>
+    <%= f.check_box :beer %>
+
+    <%= f.label :wine %>
+    <%= f.check_box :wine %>
+  </div>
+<span class="info">Snacks:
+  <div class="field">
+    <%= f.label :cookies %>
+    <%= f.check_box :cookies %>
+
+    <%= f.label :brownies %>
+    <%= f.check_box :brownies %>
+
+    <%= f.label :fruit %>
+    <%= f.check_box :fruit %>
+
+    <%= f.label :tasty_snacks %>
+    <%= f.check_box :tasty_snacks %>
+  </div>
+<span class="info">Supplies:
+  <div class="field">
+    <%= f.label :plates %>
+    <%= f.check_box :plates %>
+
+    <%= f.label :cups %>
+    <%= f.check_box :cups %>
+
+    <%= f.label :forks %>
+    <%= f.check_box :forks %>
+
+    <%= f.label :napkins %>
+    <%= f.check_box :napkins %>
+
+    <%= f.label :table %>
+    <%= f.check_box :table %>
+  </div>
+<!-- <span class="info">I have special skills!
+  <div class="field">
+    <%#= f.label :photographer %>
+    <%#= f.check_box :photographer %>
+
+    <%#= f.label :jazz_player %>
+    <%#= f.check_box :jazz_player %>
+
+    <%#= f.label :dancer %>
+    <%#= f.check_box :dancer %>
+  </div>
+ -->
+  <div class="field">
+    <%= f.label :other, :class => "info" %>:
+    <%= f.text_field :other %>
+  </div>
+
+  <div class="field">
+    <%= f.label :endo_survivor, "I'm an Endo Survivor!", :class => "info" %>
+    <%= f.check_box :endo_survivor %>
+  </div>
+
+  <div class="field">
+    <%= f.label :join_krewe, "I want to join the Krewe!", :class => "info" %>
+    <%= f.check_box :join_krewe %>
+  </div>
+
+
+  <div class="actions">
+    <%= f.submit "Count me in!", :class => "info" %>
+  </div>
+
+<% end %>

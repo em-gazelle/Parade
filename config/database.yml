@@ -1,0 +1,16 @@
+common: &common
+  adapter: postgresql
+  encoding: utf8
+  pool: 5
+  username: hilaire
+  password: 
+
+development:
+  <<: *common
+  # host: localhost
+  database: Parade2015
+
+test:
+  <<: *common
+  # host: localhost
+  database: Parade2015

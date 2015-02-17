@@ -1,0 +1,14 @@
+#route {
+	text-align: center;
+	background-color: white;
+	opacity: .7;
+	padding: 2%;
+	border-radius: 2%;
+}
+
+.info {
+  font: 400 20px/1.0 'Merienda One', Helvetica, sans-serif;
+  color: rgba(0,0,0,0.7);
+  text-shadow: 3px 3px 3px #fff;
+  line-height: 150%;
+}

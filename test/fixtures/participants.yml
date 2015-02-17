@@ -1,0 +1,27 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  email: MyString
+  name: MyString
+  jazz_player: false
+  dancer: false
+  table: false
+  join_krewe: false
+  snacks: MyString
+  drinks: MyString
+  photographer: false
+  bead_thrower: false
+  endo_survivor: false
+
+two:
+  email: MyString
+  name: MyString
+  jazz_player: false
+  dancer: false
+  table: false
+  join_krewe: false
+  snacks: MyString
+  drinks: MyString
+  photographer: false
+  bead_thrower: false
+  endo_survivor: false

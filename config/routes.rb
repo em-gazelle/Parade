@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   get ':action' => 'static#contact'
   get ':action' => 'static#endomeetreality'
   get ':action' => 'static#parade_route'
+  get ':action' => 'static#support_group'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
